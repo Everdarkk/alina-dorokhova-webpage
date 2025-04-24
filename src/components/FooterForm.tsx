@@ -3,6 +3,8 @@
 import emailjs from '@emailjs/browser'
 import { useRef } from 'react'
 
+import styles from '../styles/FooterForm.module.css'
+
 export default function FooterForm() {
     const form = useRef<HTMLFormElement>(null)
 
@@ -29,16 +31,18 @@ export default function FooterForm() {
         <form
             ref={form}
             onSubmit={handleSubmit}
-            className="footer-form"
+            className={styles.form}
         >
             <input 
+                className={styles.input}
                 type="email"
                 name='name'
-                placeholder="Ваша електронна пошта" 
+                placeholder="Ваш e-mail" 
                 required
+                autoComplete='off'
             />
 
-            <button type="submit">Відправити</button>
+            <button className={styles.btn} type="submit">Відправити</button>
         </form>
     )
 }

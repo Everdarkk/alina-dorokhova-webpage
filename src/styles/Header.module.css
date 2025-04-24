@@ -1,0 +1,62 @@
+.wrap {
+    display: flex;
+    max-width: 90rem;
+    min-width: 100%;
+    max-height: 6.25rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: clamp(0.5rem, 3vw, 2.5rem);
+    padding-inline: clamp(1rem, 5vw, 4.7rem);
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 2vw, 1.3rem);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 6.25rem);
+    font-family: var(--font-amatic);
+    font-size: clamp(2rem, 4vw, 3.125rem);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.h1 {
+    font-size: clamp(1.5rem, 5vw, 2.25rem);
+    font-family: var(--font-bad-script);
+}
+
+.p {
+    font-size: clamp(0.8rem, 3vw, 1.25rem);
+}
+
+
+.link {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover {
+    transform: scale(1.2);
+}
+
+/* ---------- BREAKPOINTS ---------- */
+
+@media (max-width: 768px) {
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        max-height: none;
+    }
+
+    .navigation {
+        margin-block: 1rem;
+    }
+}

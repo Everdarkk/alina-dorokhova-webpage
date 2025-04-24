@@ -1,4 +1,6 @@
 import Question from "./Question"
+import styles from '../styles/Faq.module.css'
+
 
 const data = [
     {
@@ -21,13 +23,13 @@ const data = [
 
 export default function Faq() {
     return (
-        <section>
-            <h1>Часті питання та відповіді</h1>
-            <div className="question-list">
+        <div className={styles.wrap}>
+            <h1 className={styles.title}>Часті питання та відповіді</h1>
+            <div className={styles.questions}>
                 {data.map((item, index) => (
                     <Question key={index} question={item.question} answer={item.answer} />
                 ))}
             </div>
-        </section>
+        </div>
     )
 }

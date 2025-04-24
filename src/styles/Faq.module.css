@@ -1,0 +1,21 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.125rem);
+    color: #653A7A;
+    text-align: center;
+    margin-block: 2rem;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}

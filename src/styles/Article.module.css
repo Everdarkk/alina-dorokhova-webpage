@@ -1,0 +1,36 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    padding-block: 2rem;
+}
+
+.img {
+    place-self: center;
+    border-radius: clamp(0.1rem, 2vw, 0.8rem);
+    box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.articleWrap {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.title {
+    font-weight: 900;
+    font-size: clamp(1.8rem, 2.5vw + 1rem, 2.5rem);
+    color: #653A7A;
+    text-align: center;
+    margin-block: 2rem;
+}
+
+/* ---------- BREAKPOINTS ----------- */
+
+@media (max-width:1080px) {
+    .img {
+        width: 100%;
+        border-radius: 0;
+    }
+}

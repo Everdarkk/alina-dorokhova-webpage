@@ -1,0 +1,62 @@
+.wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: honeydew;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    position: relative;
+    width: 100%;
+    max-width: 42rem;
+    max-height: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.9),
+        0 8px 20px rgba(0, 0, 0, 0.9);
+    
+}
+
+.open {
+    overflow-y: auto;
+}
+
+.btnClose {
+    color: black;
+    font-size: 2rem;
+    align-self: end;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 1.375rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+
+}
+
+/* ---------- BREAKPOINTS ---------- */
+@media (max-width: 600px) {
+    .modal {
+        margin: 1rem;
+    }
+}

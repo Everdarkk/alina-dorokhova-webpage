@@ -1,0 +1,29 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-weight: 900;
+    font-size: clamp(2rem, 4vw, 3.125rem);
+    color: #653A7A;
+    text-align: center;
+    margin-block: 2rem;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-inline: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* ---------- BREAKPOINTS ----------- */
+
+@media (max-width: 1195px) {
+    .cards {
+        gap: 3rem;
+    }
+}

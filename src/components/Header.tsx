@@ -1,22 +1,24 @@
 import Link from 'next/link'
 import Logo from '../../public/svg/Logo'
-import '../styles/header.css'
+
+import styles from '../styles/Header.module.css'
 
 export default function Header() {
     return (
         <>
-            <header>
-                <div>
-                    <Logo/>
-                    <span>
-                        <h1>Аліна Дорохова</h1>
-                        <p>онлайн-логопед</p>
+            <header className={styles.wrap}>
+                <div className={styles.left}>
+                    <Logo />
+                    <span className={styles.content}>
+                        <h1 className={styles.h1}>Аліна Дорохова</h1>
+                        <p className={styles.p}>онлайн-логопед</p>
                     </span>
                 </div>
-                <nav>
-                    <Link href='/'>Про мене</Link>
-                    <Link href='/info'>Інфо</Link>
-                    <Link href='/blog'>Блог</Link>
+
+                <nav className={styles.navigation}>
+                    <Link className={styles.link} href='/'>Про мене</Link>
+                    <Link className={styles.link} href='/info'>Інфо</Link>
+                    <Link className={styles.link} href='/blog'>Блог</Link>
                 </nav>
             </header>
         </>

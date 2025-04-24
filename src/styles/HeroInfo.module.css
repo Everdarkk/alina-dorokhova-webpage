@@ -1,0 +1,37 @@
+.wrap {
+    display: flex;
+    padding: 3rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.img {
+    margin-block: 10rem;
+    width: 37.5rem;
+    min-width: 30rem;
+}
+
+.title {
+    max-width: 37.5rem;
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    margin-block: 10rem;
+}
+
+/* ---------- BREAKPOINTS ---------- */
+
+@media (max-width: 768px) {
+    .wrap {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .img {
+        margin-block: auto;
+        min-width: 20rem;
+    }
+
+    .title {
+        margin-block: auto;
+        text-align: center;
+    }
+}

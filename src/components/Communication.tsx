@@ -1,14 +1,14 @@
-import Comm from '/public/svg/communication.svg'
-import Mistake from '/public/svg/mistake.svg'
+import Image from 'next/image'
+import styles from '../styles/Communication.module.css'
 
 export default function Communication() {
     return (
-        <section>
-            <div className="wrapper">
-                <div  className="communication">
-                    <div className='text'>
-                        <h2>Покроковий процес комунікації</h2>
-                        <ol>
+        <div className={styles.wrap}>
+            <div className={styles.contentWrap}>
+                <div  className={styles.communication}>
+                    <div className={styles.content}>
+                        <h2 className={styles.title}>Покроковий процес комунікації</h2>
+                        <ol className={styles.olist}>
                             <li>Заявка – заповнення короткої форми або запис через месенджер.</li>
                             <li>Діагностика – перша зустріч для оцінки мовлення, організаційні питання.</li>
                             <li>План корекції – підбір первинної індивідуальної програми із періодичним її переглядом.</li>
@@ -16,16 +16,28 @@ export default function Communication() {
                         </ol>
                     </div>
 
-                    <Comm width={500} heigth={500}/>
+                    <Image
+                        src='/jpg/communication.jpg'
+                        alt='Світлина'
+                        width={500}
+                        height={500}
+                        className={styles.img}
+                    />
                 </div>
 
-                <div className='mistakes'>
-                    <Mistake width={500} heigth={500}/>
+                <div className={styles.mistakes}>
+                    <Image 
+                        src='/jpg/mistakes.jpg'
+                        alt='Світлина'
+                        width={500}
+                        height={500}
+                        className={styles.img}
+                    />                    
 
-                    <div className='text'>
-                        <h2>Часті помилки батьків перед початком та під час занять</h2>
+                    <div className={styles.content}>
+                        <h2 className={styles.title}>Часті помилки батьків перед початком та під час занять</h2>
 
-                        <ul>
+                        <ul className={styles.list}>
                             <li>Очікування швидкого результату після 1-2 занять.</li>
 
                             <li>Відсутність домашніх тренувань між сесіями.</li>
@@ -40,6 +52,6 @@ export default function Communication() {
                     </div>
                 </div>       
             </div>
-        </section>
+        </div>
     )
 }

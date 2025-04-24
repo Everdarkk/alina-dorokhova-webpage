@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    gap: 2rem;
+}
+
+.input {
+    padding: 0.5rem;
+    background-color: #1a1b1b;
+    border-radius: 0.2rem;
+}
+
+.btn {
+    background-color: none;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+.btn:hover {
+    background-color: #1a1b1b;
+    transform: color();
+}

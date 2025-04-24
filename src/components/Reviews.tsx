@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
+import styles from '../styles/Reviews.module.css'
 
 type Review = {
     src: string
@@ -44,75 +45,88 @@ const reviews: Review[] = [
 
 export default function Reviews() {
     const [currentIndex, setCurrentIndex] = useState(0)
-    
+    const [isSmall, setIsSmall] = useState(false)
+
     const nextReview = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length)
+        if (currentIndex < reviews.length - 2) {
+            setCurrentIndex((prevIndex) => prevIndex + 1)
+        }
     }
 
     const prevReview = () => {
-        setCurrentIndex((prevIndex) => ((prevIndex - 1) + reviews.length) % reviews.length)
+        if (currentIndex > 0) {
+            setCurrentIndex((prevIndex) => prevIndex - 1)
+        }
     }
 
-    const firstReview = reviews[currentIndex]
-    const secondReview = reviews[(currentIndex + 1) % reviews.length]
+    useEffect(() => {
+        const screenCheck = () => {
+            setIsSmall(window.innerWidth < 1080)
+        }
+
+        screenCheck()
+        window.addEventListener('resize', screenCheck)
+
+        return () => window.removeEventListener('resize', screenCheck)
+    }, [])
+
+    const screenValue = isSmall ? `translateX(-${currentIndex * 100}%)` : `translateX(-${currentIndex * 50}%)`
+
 
     return (
-        <section>
-            <h1>Відгуки про мою роботу</h1>
+        <div className={styles.wrap}>
+            <h1 className={styles.title}>Відгуки про мою роботу</h1>
 
-            <div className="carousel">
-                <button onClick={prevReview}>
-                    <Image 
-                        src='/png/chevron.png' 
+            <div className={styles.sliderWrap}>
+                <button onClick={prevReview} className={styles.btn}>
+                    <Image
+                        className={styles.arrowLeft}
+                        src='/png/chevron.png'
                         alt="Стрілочка"
-                        width={100}
-                        height={100}
-                        style={{transform: 'rotate(180deg)', transition: 'transform 0.3s ease'}}
+                        width={40}
+                        height={40}
                     />
                 </button>
 
-                <div className="reviews">
-                    <div className="review-card">
-                        <div className="top-side">
-                            <Image
-                                src={firstReview.src}
-                                alt='Світлина клієнта'
-                                width={50}
-                                height={50}
-                            />
-
-                            <h1>{ firstReview.name }</h1>
-                        </div>
-
-                        <p>{ firstReview.text }</p>
-                    </div>
-
-                    <div className="review-card">
-                        <div className="top-side">
-                            <Image
-                                src={secondReview.src}
-                                alt='Світлина клієнта'
-                                width={50}
-                                height={50}
-                            />
-
-                            <h1>{ secondReview.name }</h1>
-                        </div>
-
-                        <p>{ secondReview.text }</p>
+                <div className={styles.content}>
+                    <div
+                        className={styles.slider}
+                        style={{ transform: screenValue, transition: 'transform 0.5s ease-in-out' }}
+                    >
+                        {reviews.map((review, index) => (
+                            <div key={index} className={styles.cardWrap}>
+                                <div className={styles.card}>
+                                    <div className={styles.top}>
+                                        <Image
+                                            className={styles.img}
+                                            src={review.src}
+                                            alt='Світлина клієнта'
+                                            width={100}
+                                            height={100}
+                                        />
+                                        <div className={styles.nameWrap}>
+                                            <h1 className={styles.name}>{review.name}</h1>
+                                        </div>
+                                    </div>
+                                    <div className={styles.textWrap}>
+                                        <p className={styles.text}>{review.text}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
-                <button onClick={nextReview}>
-                    <Image 
-                        src='/png/chevron.png' 
+                <button onClick={nextReview} className={styles.btn}>
+                    <Image
+                        className={styles.arrowRight}
+                        src='/png/chevron.png'
                         alt="Стрілочка"
-                        width={100}
-                        height={100}
-                        style={{transform: 'rotate(0deg)', transition: 'transform 0.3s ease'}}
+                        width={40}
+                        height={40}
                     />
                 </button>
             </div>
-        </section>
+        </div>
     )
 }

@@ -2,6 +2,7 @@
 
 import React from "react"
 import { useEffect } from "react"
+import styles from '../styles/Modal.module.css'
 
 type ModalProps = {
     isOpen: boolean
@@ -12,10 +13,11 @@ type ModalProps = {
 export default function Modal({ isOpen, onClose, children }: ModalProps) {
   useEffect(() => {
     const body = document.body
+    const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth
     
     if (isOpen) {
-      body.style.overflow = 'hidden'
-      body.style.paddingRight = '0px'
+      body.style.overflowY = 'hidden'
+      body.style.paddingRight = `${scrollBarWidth}px`
     } else {
       body.style.overflow = ''
       body.style.paddingRight = ''
@@ -30,13 +32,20 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
   if (!isOpen) return null
   
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify center bg-black/50">
-            <div className="bg-white rounded-xl shadow-xl p-6 relative w-full max-w-md">
-                <button
-                    onClick={onClose}
-                    >
-                    &times;
-                </button>
+    <div className={`${styles.wrap} ${isOpen ? styles.open : ''}`}>
+            <div className={styles.modal}>
+                <div className={styles.header}>
+                  <h1 className={styles.title}>
+                    Дані для відправки
+                  </h1>
+
+                  <button
+                      onClick={onClose}
+                      className={styles.btnClose}
+                      >
+                      &times;
+                  </button>
+                </div>
 
                 {children}
             </div>

@@ -6,12 +6,18 @@ import Schedule from "@/components/Schedule"
 
 export default function Info() {
     return (
-        <>
-            <HeroInfo />
-            <Schedule />
+        <section>
+            <div style={{maxWidth: '90rem', marginInline: 'auto'}}>
+                <HeroInfo />
+                <Schedule />
+            </div>
+
             <ForBeg />
             <Communication />
-            <MyTools />
-        </>
+
+            <div style={{maxWidth: '90rem', marginInline: 'auto'}}>
+                <MyTools />
+            </div>
+        </section>
     )
 }

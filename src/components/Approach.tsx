@@ -1,11 +1,12 @@
 import Card from "./Card"
+import styles from '../styles/Approach.module.css'
 
 export default function Approach() {
     return (
-        <section>
-            <h1>Мій підхід</h1>
+        <div className={styles.wrap}>
+            <h1 className={styles.title}>Мій підхід</h1>
 
-            <div className="cards">
+            <div className={styles.cards}>
                <Card
                     src="/png/skills.png"
                     title="Адаптовані заняття"
@@ -24,6 +25,6 @@ export default function Approach() {
                     text="Для досягнення найкращих результатів важливо, щоб батьки розуміли свою відповідальність. Я пояснюю, що треба робити у повсякденному житті і даю вправи, що цьому сприятимуть"
                 />
             </div>
-        </section>
+        </div>
     )
 }

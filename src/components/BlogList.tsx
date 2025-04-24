@@ -1,32 +1,36 @@
 import { blogs } from "../data/blogs"
 import Link from "next/link"
 import Image from "next/image"
+import styles from '../styles/BlogList.module.css'
 
 export default function BlogList() {
     return (
-        <section>
-            <ul className='blog-list'>
-                { blogs.map((blog) => (
-                    <li key={ blog.slug } className='blog-post'>
+        <div className={styles.wrap}>
+            <ul className={styles.list}>
+                { blogs.slice().reverse().map((blog) => (
+                    <li key={ blog.slug } className={styles.itemWrap}>
                         <Link href={`/blog/${blog.slug}`}>
-                            <Image 
-                                src={blog.imgSrc}
-                                alt="Світлина"
-                                width={1100}
-                                height={600}
-                            />
-
-                            <h1 className="title">
-                                {blog.title}
-                            </h1>
-
-                            <p className="date">
-                                {blog.date}
-                            </p>
+                            <div className={styles.contentWrap}>
+                                <Image
+                                    src={blog.imgSrc}
+                                    alt="Світлина"
+                                    width={800}
+                                    height={600}
+                                    className={styles.img}
+                                />
+                                <div className={styles.content}>
+                                    <h1 className={styles.title}>
+                                        {blog.title}
+                                    </h1>
+                                    <p className={styles.date}>
+                                        {blog.date}
+                                    </p>
+                                </div>
+                            </div>
                         </Link>
                     </li>
                 )) }
             </ul>
-        </section>
+        </div>
     )
 }

@@ -1,0 +1,82 @@
+.wrap {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    height: 18.75rem;
+}
+
+.img2 {
+    display: none;
+}
+
+.img {
+    width: 100%;
+    position: absolute;
+    top: 0.75rem;
+}
+
+.main {
+    display: flex;
+    gap: clamp(0.5rem, 2vw, 6rem);
+}
+
+/* ---------- BREAKPOINTS ---------- */
+
+@media (max-width: 1024px) {
+    .wrap {
+        display: block;
+    }
+}
+
+@media (max-width: 990px) {
+    .wrap {
+        display: flex;
+        position: relative;
+        margin-inline: auto;
+        max-width: 20rem;
+        height: auto;
+    
+    }
+
+    .img {
+        display: none;
+    }
+
+    .img2 {
+        display: flex;
+        position: absolute;
+        left: 1.19rem;
+        height: 100%;
+        width: auto;
+
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+    }
+}
+
+@media (max-width:400px) {
+    .main {
+        width: 21rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .wrap {
+        height: auto;
+    }
+
+    .img2 {
+        display: none;
+    }
+    .main {
+        width: 100%;
+    }
+
+    
+}

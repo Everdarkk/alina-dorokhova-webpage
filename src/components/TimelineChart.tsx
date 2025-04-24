@@ -1,12 +1,28 @@
-import Timeline from '/public/svg/Timeline.svg'
+import Image from 'next/image'
 import Year from './Year'
+
+import styles from '../styles/TimelineChart.module.css'
 
 export default function TimelineChart() {
     return (
-        <div>
-            <Timeline />
+        <div className={styles.wrap}>
+            <Image 
+                src='/png/vector.png'
+                alt='Шкала часу'
+                width={1300}
+                height={50}
+                className={styles.img} 
+            />
 
-            <div className='years'>
+            <Image 
+                src='/png/vector2.png'
+                alt='Шкала часу'
+                width={10}
+                height={100}
+                className={styles.img2}
+            />
+
+            <div className={styles.main}>
                 <Year
                     year='2016'
                     text='початок логопедичної діяльності в ході навчання в ДДПУ'

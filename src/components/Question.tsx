@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
+import styles from '../styles/Question.module.css'
 
 type QuestionProps = {
     question: string
@@ -10,28 +11,49 @@ type QuestionProps = {
 
 export default function Question({ question, answer }: QuestionProps) {
     const [isOpen, setIsOpen] = useState(false)
+    const answerRef = useRef<HTMLDivElement | null>(null)
     
+    useEffect(() => {
+        const el = answerRef.current
+
+        if (!el) return
+
+        if (isOpen) {
+            el.style.maxHeight = el.scrollHeight + 'px'
+            el.style.opacity = '1' 
+        } else {
+            el.style.maxHeight = '0px'
+            el.style.opacity = '0' 
+        }
+    }, [isOpen])
+
     return (
-        <div className="qa">
+        <div className={styles.wrap}>
             <button 
                 onClick={() => setIsOpen(!isOpen)} 
-                className="question"
-                >
-                <span>{question}</span>
+                className={styles.question}
+            >
+                <span className={styles.text}>{question}</span>
 
                 <Image 
+                    className={styles.img}
                     src='/png/chevron.png' 
                     alt="Стрілочка"
                     width={50}
                     height={50}
-                    style={{transform: isOpen ? 'rotate(270deg)' : 'rotate(90deg)', transition: 'transform 0.3s ease'}}
-                    />
+                    style={{
+                        transform: isOpen ? 'rotate(270deg)' : 'rotate(90deg)',
+                        transition: 'transform 0.3s ease'
+                    }}
+                />
             </button>
-            {isOpen && (
-                <div className="answer">
-                    {answer}
-                </div>
-            )}
+
+            <div
+                ref={answerRef}
+                className={`${styles.answer} ${isOpen ? styles.open : ''}`}
+            >
+                {answer}
+            </div>
         </div>
     )
 }

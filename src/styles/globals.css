@@ -1,2 +1,52 @@
 @import "tailwindcss";
 
+:root {
+    --font-spectral: 'Spectral SC', serif;
+    --font-bad-script: 'Bad Script', serif;
+    --font-amatic: 'Amatic SC', cursive;
+    --font-sofia: 'Sofia Sans', cursive;
+    --font-comfortaa: 'Comfortaa', cursive;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-spectral);
+    background-image: url('../../public/png/holo.png');
+    
+    
+}
+
+
+
+.scroll {
+    position: fixed;
+    cursor: pointer;
+    right: 4%;
+    bottom: 2.8%;
+    width: 2.5rem;
+    opacity: 0.3;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: none;
+}
+.scroll:hover {
+    opacity: 0.6;
+    transform: scale(1.1);
+}
+
+.scroll.visible {
+    display: flex;
+}
+
+/* ---------- BREAKPOINTS ---------- */
+
+@media (min-width: 825px) {
+    .scroll {
+        display: none;
+    }
+    .scroll.visible {
+        display: none;
+    }
+}
