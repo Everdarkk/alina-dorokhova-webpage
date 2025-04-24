@@ -5,10 +5,33 @@ import { Spectral_SC, Bad_Script, Amatic_SC, Sofia_Sans, Comfortaa } from "next/
 
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-import Metadata from "@/components/Metadata"
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
+
+export const metadata = {
+  title: 'Аліна Дорохова | Логопед онлайн',
+  description: 'Сайт логопеда Аліни Дорохової. Онлайн-консультації, корекція мовлення, розвиток мовлення у дітей.',
+  keywords: 'логопед онлайн, логопед для дітей, логопед для дорослих, логопедичні заняття онлайн, логопед для дітей з аутизмом, логопед для дітей з дислексією, логопед для дітей з затримкою мовлення, логопед для дітей з фонетичними порушеннями, логопед для дітей з дизартрією, логопед для дітей з алалією, логопед для дітей з ринолалією, логопед для дітей з заїканням, логопед для дітей з дисграфією, логопед для дітей з дислексією, логопед для дітей з афазією, логопед для дітей з аграматизмом, логопед для дітей з фонематичним недорозвиненням',
+  author: 'Аліна Дорохова',
+  creator: 'Олександр Дорохов',
+  openGraph: {
+    title: 'Аліна Дорохова - логопед онлайн',
+    description: 'Сучасна логопедія для дітей та дорослих. Онлайн заняття з логопедом.',
+    url: 'https://alina-dorokhova.vercel.app/',
+    siteName: 'Аліна Дорохова - логопед онлайн',
+    images: [
+      {
+        url: '/jpg/metadata-pic.jpg',  // Шлях до зображення на вашому сайті
+        width: 1200,
+        height: 630,
+        alt: 'Аліна Дорохова - логопед онлайн',
+      }
+    ],
+    locale: 'uk_UA',
+    type: 'website'
+  }
+}
 
 const spectral = Spectral_SC({
   subsets: ['cyrillic'],
@@ -74,7 +97,7 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body className={`${spectral.variable} ${badScript.variable} ${amatic.variable} ${sofia.variable} ${comfortaa.variable}`}>
-          <Metadata />
+          
           <Header />
           {children}
           <Footer />
