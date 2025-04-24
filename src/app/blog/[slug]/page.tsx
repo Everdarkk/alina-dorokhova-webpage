@@ -3,14 +3,10 @@ import { notFound } from "next/navigation"
 import Image from "next/image"
 import styles from '../../../styles/Article.module.css'
 
-interface ArticleProps {
-    params: {
-        slug: string
-    }
-}
 
-export default async function Article({ params }: ArticleProps) {
-    const { slug } = await params
+
+export default async function Article({ params }: { params: Promise<{slug: string }>} ) {
+    const slug = (await params).slug
     const blog = blogs.find(b => b.slug === slug)
     
     if(!blog) return notFound()
