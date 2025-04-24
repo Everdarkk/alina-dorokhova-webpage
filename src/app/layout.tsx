@@ -22,7 +22,7 @@ export const metadata = {
     siteName: 'Аліна Дорохова - логопед онлайн',
     images: [
       {
-        url: '/jpg/metadata-pic.jpg',  // Шлях до зображення на вашому сайті
+        url: '/jpg/metadata-pic.jpg',
         width: 1200,
         height: 630,
         alt: 'Аліна Дорохова - логопед онлайн',
