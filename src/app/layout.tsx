@@ -1,13 +1,14 @@
 'use client'
 
-import "../styles/globals.css";
-import { Spectral_SC, Bad_Script, Amatic_SC, Sofia_Sans, Comfortaa } from "next/font/google";
+import "../styles/globals.css"
+import { Spectral_SC, Bad_Script, Amatic_SC, Sofia_Sans, Comfortaa } from "next/font/google"
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
+import Metadata from "@/components/Metadata"
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react"
+import Image from "next/image"
 
 const spectral = Spectral_SC({
   subsets: ['cyrillic'],
@@ -73,8 +74,7 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body className={`${spectral.variable} ${badScript.variable} ${amatic.variable} ${sofia.variable} ${comfortaa.variable}`}>
-
-        
+          <Metadata />
           <Header />
           {children}
           <Footer />
