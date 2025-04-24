@@ -3,11 +3,8 @@ import { notFound } from "next/navigation"
 import Image from "next/image"
 import styles from '../../../styles/Article.module.css'
 
-export async function generateStaticParams() {
-    return blogs.map(blog => ({slug: blog.slug}))
-}
 
-export default async function Article({ params }: { params: { slug: string } } ) {
+export default async function Article({ params }: { params: { slug: string } }) {
     const blog = blogs.find(b => b.slug === params.slug)
     
     if(!blog) return notFound()
