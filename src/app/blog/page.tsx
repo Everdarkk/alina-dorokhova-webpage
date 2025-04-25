@@ -28,8 +28,8 @@ export default function Blog() {
     return (
         <>
             <Head>
-              <link rel="icon" href="https://alinadorokhova.com/icon.svg" />
-              <link rel="apple-touch-icon" href="https://alinadorokhova.com/icon.svg" />
+              <link rel="icon" href="https://alinadorokhova.com/favicon.svg" />
+              <link rel="apple-touch-icon" href="https://alinadorokhova.com/favicon.svg" />
             </Head>
 
             <section style={{ maxWidth:'90rem', marginInline:'auto'}}>
