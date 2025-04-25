@@ -75,7 +75,7 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <Head>
-        <link rel="icon" href="/icon.svg" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${spectral.variable} ${badScript.variable} ${amatic.variable} ${sofia.variable} ${comfortaa.variable}`}>
           
