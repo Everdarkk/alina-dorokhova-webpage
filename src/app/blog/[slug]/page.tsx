@@ -15,7 +15,7 @@ export const metadata = {
     description: 'Сучасна логопедія для дітей та дорослих. Онлайн заняття з логопедом.',
     images: [
       {
-        url: '/icon.svg',
+        url: '/favicon.svg',
         width: 1200,
         height: 630,
         alt: 'Аліна Дорохова - логопед онлайн',
