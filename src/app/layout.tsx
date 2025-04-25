@@ -9,6 +9,8 @@ import Footer from "@/components/Footer"
 import { useEffect, useState } from "react"
 import Image from "next/image"
 
+import Head from "next/head"
+
 const spectral = Spectral_SC({
   subsets: ['cyrillic'],
   weight: ['400', '600', '700', '800'],
@@ -72,6 +74,9 @@ export default function RootLayout({
 
   return (
     <html lang="uk">
+      <Head>
+        <link rel="icon" href="/icon.svg" />
+      </Head>
       <body className={`${spectral.variable} ${badScript.variable} ${amatic.variable} ${sofia.variable} ${comfortaa.variable}`}>
           
           <Header />
