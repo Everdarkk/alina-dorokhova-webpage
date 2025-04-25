@@ -42,7 +42,7 @@ export default function FooterForm() {
                 autoComplete='off'
             />
 
-            <button className={styles.btn} type="submit">Відправити</button>
+            <button className={styles.btn} type="submit">Надіслати</button>
         </form>
     )
 }

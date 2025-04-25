@@ -23,7 +23,7 @@ export default function Schedule() {
 
             <div className={styles.calendarWrap}>
                 <iframe 
-                    src="https://calendar.google.com/calendar/embed?src=logoped.alina.dorokhova%40gmail.com&ctz=Europe%2FKiev"   
+                    src="https://calendar.google.com/calendar/embed?src=logoped.alina.dorokhova%40gmail.com&ctz=Europe%2FKiev&hl=uk"   
                     width="900" 
                     height="500" 
                     className="calendar"

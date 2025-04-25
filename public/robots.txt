@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alinadorokhova.com/sitemap.xml
