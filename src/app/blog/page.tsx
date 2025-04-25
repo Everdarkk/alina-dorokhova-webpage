@@ -1,5 +1,6 @@
 import HeroBlog from "@/components/HeroBlog"
 import BlogList from "@/components/BlogList"
+import Head from "next/head"
 
 export const metadata = {
   title: 'Аліна Дорохова | Блог',
@@ -11,9 +12,16 @@ export const metadata = {
 
 export default function Blog() {
     return (
-        <section style={{ maxWidth:'90rem', marginInline:'auto'}}>
-            <HeroBlog />
-            <BlogList />
-        </section>
+        <>
+            <Head>
+                <link rel="icon" href="/icon.svg" />
+                <link rel="apple-touch-icon" href="/icon.svg" />
+            </Head>
+
+            <section style={{ maxWidth:'90rem', marginInline:'auto'}}>
+                <HeroBlog />
+                <BlogList />
+            </section>
+        </>
     )
 }

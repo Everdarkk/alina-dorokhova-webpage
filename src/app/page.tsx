@@ -1,5 +1,6 @@
-import Hero from "@/components/Hero";
-import About from "@/components/About";
+import Hero from "@/components/Hero"
+import About from "@/components/About"
+import Head from "next/head"
 
 export const metadata = {
   title: 'Аліна Дорохова | Логопед онлайн',
@@ -7,12 +8,29 @@ export const metadata = {
   keywords: 'логопед онлайн, логопед для дітей, логопед для дорослих, логопедичні заняття онлайн, логопед для дітей з аутизмом, логопед для дітей з дислексією, логопед для дітей з затримкою мовлення, логопед для дітей з фонетичними порушеннями, логопед для дітей з дизартрією, логопед для дітей з алалією, логопед для дітей з ринолалією, логопед для дітей з заїканням, логопед для дітей з дисграфією, логопед для дітей з дислексією, логопед для дітей з афазією, логопед для дітей з аграматизмом, логопед для дітей з фонематичним недорозвиненням',
   author: 'Аліна Дорохова',
   creator: 'Олександр Дорохов',
+  openGraph: {
+    title: 'Аліна Дорохова - логопед онлайн',
+    description: 'Сучасна логопедія для дітей та дорослих. Онлайн заняття з логопедом.',
+    images: [
+      {
+        url: '/icon.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Аліна Дорохова - логопед онлайн',
+      },
+    ],
+    siteName: 'Аліна Дорохова - логопед онлайн',
+  },
 }
 
 export default function Home() {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/icon.svg" />
+        <link rel="apple-touch-icon" href="/icon.svg" />
+      </Head>
       <Hero />
       <About />
     </>
