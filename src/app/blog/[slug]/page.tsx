@@ -35,8 +35,8 @@ export default async function Article({ params }: { params: Promise<{slug: strin
     return (
         <>
             <Head>
-                <link rel="icon" href="/icon.svg" />
-                <link rel="apple-touch-icon" href="/icon.svg" />
+                <link rel="icon" href="https://alinadorokhova.com/icon.svg" />
+                <link rel="apple-touch-icon" href="https://alinadorokhova.com/icon.svg" />
             </Head>
 
     
