@@ -13,7 +13,7 @@ export const metadata = {
     description: 'Сучасна логопедія для дітей та дорослих. Онлайн заняття з логопедом.',
     images: [
       {
-        url: '/favicon.svg',
+        url: '/favicon.ico',
         width: 1200,
         height: 630,
         alt: 'Аліна Дорохова - логопед онлайн',
@@ -29,8 +29,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link rel="icon" href="https://alinadorokhova.com/favicon.ico" />
-        <link rel="apple-touch-icon" href="https://alinadorokhova.com/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
       </Head>
       <Hero />
       <About />
