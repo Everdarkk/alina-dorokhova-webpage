@@ -6,7 +6,8 @@ import Head from "next/head"
 
 
 export async function generateMetadata({ params }: { params: {slug: string } }) { 
-  const blog = blogs.find(b => b.slug === params.slug)
+  const slug = (await params).slug  
+  const blog = blogs.find(b => b.slug === slug)
   if (!blog) return notFound()
   
   return {
