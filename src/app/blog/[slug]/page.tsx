@@ -23,7 +23,7 @@ export const metadata = {
     ],
     siteName: 'Аліна Дорохова - логопед онлайн',
   },
-  metadataBase: new URL('https://alinadorokhova.com'),
+  metadataBase: new URL('https://alinadorokhova.com/'), // Update this to the correct URL for your blog
 }
 
 export default async function Article({ params }: { params: Promise<{slug: string }>} ) {
