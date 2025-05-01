@@ -6,6 +6,7 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://www.alinadorokhova.com/info/</loc>
     <lastmod>2025-04-20</lastmod>
@@ -13,9 +14,46 @@
     <priority>0.8</priority>
   </url>
   <url>
+
     <loc>https://www.alinadorokhova.com/blog/</loc>
     <lastmod>2025-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://www.alinadorokhova.com/blog/fonematychnyi-slukh</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.alinadorokhova.com/blog/zvuky-v-movlenni</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.alinadorokhova.com/blog/motyvaciya</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.alinadorokhova.com/blog/myty-pro-movlennya</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.alinadorokhova.com/blog/artykulyacijni-vpravy</loc>
+    <lastmod>2025-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>

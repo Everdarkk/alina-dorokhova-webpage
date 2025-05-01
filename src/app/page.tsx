@@ -21,7 +21,7 @@ export const metadata = {
     ],
     siteName: 'Аліна Дорохова - логопед онлайн',
   },
-  metadataBase: new URL('https://alinadorokhova.com'),
+  metadataBase: new URL('https://www.alinadorokhova.com'),
   alternates: {
     canonical: 'https://www.alinadorokhova.com'
   }
