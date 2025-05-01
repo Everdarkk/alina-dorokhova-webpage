@@ -5,7 +5,7 @@ import styles from '../../../styles/Article.module.css'
 import Head from "next/head"
 
 
-export async function generateMetadata({ params }: { params: {slug: string } }) { 
+export async function generateMetadata({ params }: { params: Promise<{slug: string }> }) { 
   const slug = (await params).slug  
   const blog = blogs.find(b => b.slug === slug)
   if (!blog) return notFound()
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: {slug: string } }) 
       ],
   },
   alternates: {
-    canonical: `https://www.alinadorokhova.com/blog/${params.slug}`,
+    canonical: `https://www.alinadorokhova.com/blog/${slug}`,
   },
   metadataBase: new URL('https://www.alinadorokhova.com'),
   }
