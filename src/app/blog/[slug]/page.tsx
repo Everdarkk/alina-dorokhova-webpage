@@ -29,9 +29,9 @@ export async function generateMetadata({ params }: { params: Promise<{slug: stri
       ],
   },
   alternates: {
-    canonical: `https://www.alinadorokhova.com/blog/${slug}`,
+    canonical: `https://alinadorokhova.com/blog/${slug}`,
   },
-  metadataBase: new URL('https://www.alinadorokhova.com'),
+  metadataBase: new URL('https://alinadorokhova.com'),
   }
     
     
