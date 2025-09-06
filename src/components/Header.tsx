@@ -10,7 +10,7 @@ export default function Header() {
                 <div className={styles.left}>
                     <Logo />
                     <span className={styles.content}>
-                        <h1 className={styles.h1}>Аліна Дорохова</h1>
+                        <p className={styles.h1}>Аліна Дорохова</p>
                         <p className={styles.p}>онлайн-логопед</p>
                     </span>
                 </div>
