@@ -75,7 +75,7 @@ export default function Reviews() {
 
     return (
         <div className={styles.wrap}>
-            <h1 className={styles.title}>Відгуки про мою роботу</h1>
+            <h3 className={styles.title}>Відгуки про мою роботу</h3>
 
             <div className={styles.sliderWrap}>
                 <button onClick={prevReview} className={styles.btn}>
@@ -105,7 +105,7 @@ export default function Reviews() {
                                             height={100}
                                         />
                                         <div className={styles.nameWrap}>
-                                            <h1 className={styles.name}>{review.name}</h1>
+                                            <h4 className={styles.name}>{review.name}</h4>
                                         </div>
                                     </div>
                                     <div className={styles.textWrap}>

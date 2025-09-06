@@ -4,7 +4,7 @@ import styles from '../styles/Intro.module.css'
 export default function Intro() {
     return (
         <div className={styles.wrap}>
-            <h1 className={styles.title}>Про мене</h1>
+            <h3 className={styles.title}>Про мене</h3>
 
             <div className={styles.main}>
                 <Image 

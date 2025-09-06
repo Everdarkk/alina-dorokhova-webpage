@@ -60,7 +60,7 @@ export default function Footer() {
                 </a>
             </nav>
             <span className={styles.question}>
-                <h3 className={styles.text}>Залишились питання?</h3>
+                <h5 className={styles.text}>Залишились питання?</h5>
                 <p className={styles.mail}>Залиште свою електронну пошту для зворотнього зв&apos;язку</p>
                 <FooterForm />
             </span>

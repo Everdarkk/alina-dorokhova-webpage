@@ -35,9 +35,9 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
     <div className={`${styles.wrap} ${isOpen ? styles.open : ''}`}>
             <div className={styles.modal}>
                 <div className={styles.header}>
-                  <h1 className={styles.title}>
+                  <p className={styles.title}>
                     Дані для відправки
-                  </h1>
+                  </p>
 
                   <button
                       onClick={onClose}

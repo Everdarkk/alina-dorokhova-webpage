@@ -16,8 +16,8 @@ export default function Hero() {
         <section className={styles.wrap}>
             <div className={styles.main}>
                 <div className={styles.content}>
-                    <h1 className={styles.h1}>Кожне слово має звучати впевнено!</h1>
-                    <h2 className={styles.h2}>Допомагаю вам знайти гармонію в мовленні, подолати труднощі та відчути радість від спілкування. </h2>
+                    <h1 className={styles.h1}>Покращіть мовлення та знайдіть впевненість!</h1>
+                    <h2 className={styles.h2}>Логопед онлайн: курси та індивідуальні заняття зі спеціалістом для покращення вимови та набуття впевненості у мовленні. </h2>
                     <span className={styles.span}>
                         <p className={styles.p}>З любов’ю, турботою та індивідуальним підходом – разом зробимо ваше мовлення зрозумілим, виразним і живим!</p>
                     </span>

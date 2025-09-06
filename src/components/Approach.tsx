@@ -4,7 +4,7 @@ import styles from '../styles/Approach.module.css'
 export default function Approach() {
     return (
         <div className={styles.wrap}>
-            <h1 className={styles.title}>Мій підхід</h1>
+            <h3 className={styles.title}>Мій підхід</h3>
 
             <div className={styles.cards}>
                <Card

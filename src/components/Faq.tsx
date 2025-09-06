@@ -24,7 +24,7 @@ const data = [
 export default function Faq() {
     return (
         <div className={styles.wrap}>
-            <h1 className={styles.title}>Часті питання та відповіді</h1>
+            <h3 className={styles.title}>Часті питання та відповіді</h3>
             <div className={styles.questions}>
                 {data.map((item, index) => (
                     <Question key={index} question={item.question} answer={item.answer} />

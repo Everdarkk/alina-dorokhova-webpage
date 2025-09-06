@@ -13,7 +13,7 @@ export default function Card({src, title, text}: {src: string, title: string, te
             />
 
             <span className={styles.content}>
-                <h1 className={styles.title}>{title}</h1>
+                <h3 className={styles.title}>{title}</h3>
                 <p className={styles.text}>{text}</p>
             </span>
         </div>
