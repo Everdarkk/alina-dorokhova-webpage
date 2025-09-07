@@ -27,16 +27,7 @@ export const metadata = {
   }
 }
 
-export default function Home() {
-
-  return (
-    <>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
-        <script type="application/ld+json">
-          {`
-            {
+const jsonLd = {
               "@context": "https://schema.org",
               "@type": "Service",
               "name": "Онлайн-консультації логопеда Аліни Дорохової",
@@ -52,7 +43,20 @@ export default function Home() {
               "areaServed": "Онлайн",
               "serviceOutput": "Покращення мовлення, корекція звуковимови, допомога при заїканні, дислексії, ЗРР"
             }
-          `}
+
+export default function Home() {
+
+  return (
+    <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+        }}>
+
         </script>
       </Head>
       
