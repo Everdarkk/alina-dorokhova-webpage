@@ -47,6 +47,23 @@ const comfortaa = Comfortaa({
   display: 'swap',
 })
 
+const jsonLd = {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Онлайн-консультації логопеда Аліни Дорохової",
+              "description": "Онлайн-консультації та корекція мовленнєвих порушень у дітей та дорослих.",
+              "serviceType": "Логопед онлайн",
+              "provider": {
+                "@type": "Person",
+                "name": "Аліна Дорохова",
+                "url": "https://alinadorokhova.com",
+                "jobTitle": "Логопед",
+                "phone": "+380663276738",
+              },
+              "areaServed": "Онлайн",
+              "serviceOutput": "Покращення мовлення, корекція звуковимови, допомога при заїканні, дислексії, ЗРР"
+            }
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -76,6 +93,13 @@ export default function RootLayout({
     <html lang="uk">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+        }}>
+
+        </script>
       </Head>
       <body className={`${spectral.variable} ${badScript.variable} ${amatic.variable} ${sofia.variable} ${comfortaa.variable}`}>
           

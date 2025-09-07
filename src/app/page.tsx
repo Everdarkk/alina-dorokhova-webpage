@@ -27,23 +27,6 @@ export const metadata = {
   }
 }
 
-const jsonLd = {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Онлайн-консультації логопеда Аліни Дорохової",
-              "description": "Онлайн-консультації та корекція мовленнєвих порушень у дітей та дорослих.",
-              "serviceType": "Логопед онлайн",
-              "provider": {
-                "@type": "Person",
-                "name": "Аліна Дорохова",
-                "url": "https://alinadorokhova.com",
-                "jobTitle": "Логопед",
-                "image": "https://alinadorokhova.com/images/alina-dorokhova.jpg" // Замініть на реальний URL вашого фото
-              },
-              "areaServed": "Онлайн",
-              "serviceOutput": "Покращення мовлення, корекція звуковимови, допомога при заїканні, дислексії, ЗРР"
-            }
-
 export default function Home() {
 
   return (
@@ -51,13 +34,7 @@ export default function Home() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
-        }}>
-
-        </script>
+        
       </Head>
       
       <Hero />
