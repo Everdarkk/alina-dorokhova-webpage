@@ -19,9 +19,9 @@ export default function BlogList() {
                                     className={styles.img}
                                 />
                                 <div className={styles.content}>
-                                    <h1 className={styles.title}>
+                                    <h3 className={styles.title}>
                                         {blog.title}
-                                    </h1>
+                                    </h3>
                                     <p className={styles.date}>
                                         {blog.date}
                                     </p>

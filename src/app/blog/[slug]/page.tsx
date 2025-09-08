@@ -59,7 +59,7 @@ export default async function Article({ params }: { params: Promise<{slug: strin
 
                     <div className={styles.articleWrap}>
                         <h1 className={styles.title}>{ blog.title }</h1>
-                        <div className={styles.text}>{ blog.content }</div>
+                        <p className={styles.text}>{ blog.content }</p>
                     </div>
                 </div>
             </section>

@@ -7,7 +7,7 @@ export default function Communication() {
             <div className={styles.contentWrap}>
                 <div  className={styles.communication}>
                     <div className={styles.content}>
-                        <h2 className={styles.title}>Покроковий процес комунікації</h2>
+                        <h3 className={styles.title}>Покроковий процес комунікації</h3>
                         <ol className={styles.olist}>
                             <li>Заявка – заповнення короткої форми або запис через месенджер.</li>
                             <li>Діагностика – перша зустріч для оцінки мовлення, організаційні питання.</li>
@@ -35,7 +35,7 @@ export default function Communication() {
                     />                    
 
                     <div className={styles.content}>
-                        <h2 className={styles.title}>Часті помилки батьків перед початком та під час занять</h2>
+                        <h3 className={styles.title}>Часті помилки батьків перед початком та під час занять</h3>
 
                         <ul className={styles.list}>
                             <li>Очікування швидкого результату після 1-2 занять.</li>

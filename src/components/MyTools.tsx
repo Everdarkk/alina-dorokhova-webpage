@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function MyTools() {
     return (
         <div className={styles.wrap}>
-            <h1 className={styles.title}>Мої інструменти</h1>
+            <h2 className={styles.title}>Мої інструменти</h2>
 
             <div className={styles.content}>
                 <ul className={styles.list}>
