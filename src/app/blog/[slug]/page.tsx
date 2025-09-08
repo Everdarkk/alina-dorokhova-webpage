@@ -17,6 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{slug: stri
     canonical: `https://alinadorokhova.com/blog/${slug}`,
     },
     openGraph: {
+      siteName: 'Аліна Дорохова - логопед онлайн',
+      type: 'website',
       title: blog.title,
       description: 'Сучасна логопедія для дітей та дорослих. Онлайн консультації з логопедом.',
       images: [

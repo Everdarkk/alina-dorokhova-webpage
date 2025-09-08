@@ -10,9 +10,19 @@ export const metadata: Metadata = {
     canonical: 'https://alinadorokhova.com/blog',
   },
   openGraph: {
+    siteName: 'Аліна Дорохова - логопед онлайн',
+    type: 'website',
     title: 'Блог логопеда Аліни Дорохової',
     description: 'Корисні статті та поради від логопеда онлайн Аліни Дорохової. Дізнайтеся більше про корекцію мовлення, розвиток навичок та сучасні методи логопедії.',
     url: 'https://alinadorokhova.com/blog',
+    images: [
+        {
+        url: '/favicon.ico',
+        width: 1200,
+        height: 630,
+        alt: 'Аліна Дорохова - логопед онлайн',
+        },
+      ],
   },
 }
 

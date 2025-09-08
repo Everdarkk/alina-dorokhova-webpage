@@ -13,9 +13,19 @@ export const metadata: Metadata = {
     canonical: 'https://alinadorokhova.com/info',
   },
   openGraph: {
+    siteName: 'Аліна Дорохова - логопед онлайн',
+    type: 'website',
     title: 'Про логопеда Аліну Дорохову',
     description: 'Детальна інформація про професійний шлях та методи роботи логопеда Аліни Дорохової.',
     url: 'https://alinadorokhova.com/info',
+    images: [
+        {
+        url: '/favicon.ico',
+        width: 1200,
+        height: 630,
+        alt: 'Аліна Дорохова - логопед онлайн',
+        },
+      ],
   },
 }
 

@@ -12,9 +12,9 @@ export default function Schedule() {
     return (
         <div id="schedule" className={styles.wrap}>
             <div className={styles.content}>
-                <h1 className={styles.title}>
+                <h2 className={styles.title}>
                     Мій розклад
-                </h1>
+                </h2>
 
                 <p className={styles.text}>
                     Щоб вам було зручно спланувати заняття, я публікую актуальний розклад із вільними годинами. Виберіть зручний час і зв’яжіться для запису. Якщо зручного для Вас часу немає – напишіть мені, і ми спробуємо знайти рішення!

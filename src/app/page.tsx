@@ -10,10 +10,22 @@ export const metadata: Metadata = {
     canonical: 'https://alinadorokhova.com'
   },
   openGraph: {
+    siteName: 'Аліна Дорохова - логопед онлайн',
+    type: 'website',
     title: 'Аліна Дорохова – Ваш логопед онлайн для дітей та дорослих', 
     description: 'Отримайте професійну допомогу від логопеда онлайн. Аліна Дорохова спеціалізується на корекції мовлення, дислексії, заїкання для дітей та дорослих. Запишіться на консультацію!',
     url: 'https://alinadorokhova.com',
+    images: [{
+      url: '/favicon.ico',
+      width: 1200,
+      height: 630,
+      alt: 'Аліна Дорохова - логопед онлайн',
+    }],
   },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  }
 }
 
 export default function Home() {
