@@ -2,14 +2,37 @@
 
 import "../styles/globals.css"
 import { Spectral_SC, Bad_Script, Amatic_SC, Sofia_Sans, Comfortaa } from "next/font/google"
-
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
-
 import { useEffect, useState } from "react"
 import Image from "next/image"
-
 import Head from "next/head"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: {
+    template: 'Логопед онлайн — Аліна Дорохова',
+    default: 'Логопед онлайн — Аліна Дорохова | Корекція і розвиток мовлення',
+  },
+  description: 'Професійний логопед онлайн Аліна Дорохова. Комплексна допомога дітям та дорослим: корекція затримки мовлення, дислексії, заїкання та інших мовленнєвих порушень. Індивідуальний підхід.',
+  keywords: 'логопед, логопед онлайн, логопед для дітей, логопедичні заняття онлайн, корекція мовлення, розвиток мовлення у дітей, логопед для дорослих, допомога при заїканні, дислексія, дисграфія, ЗРР, Аліна Дорохова.',
+  metadataBase: new URL('https://alinadorokhova.com'),
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+  
+  openGraph: {
+    siteName: 'Аліна Дорохова - логопед онлайн',
+    images: [{
+      url: '/favicon.ico',
+      width: 1200,
+      height: 630,
+      alt: 'Аліна Дорохова - логопед онлайн',
+    }],
+    type: 'website'
+  }
+}
 
 const spectral = Spectral_SC({
   subsets: ['cyrillic'],

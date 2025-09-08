@@ -13,9 +13,9 @@ export async function generateMetadata({ params }: { params: Promise<{slug: stri
   return {
     title: 'Логопед онлайн — Аліна Дорохова | Корекція і розвиток мовлення',
     description: 'Логопед онлайн Аліна Дорохова — консультації для дітей та дорослих. Допомога при затримці мовлення, дислексії, заїканні та інших мовленнєвих порушеннях. Досвід та індивідуальний підхід з турботою про кожного клієнта!',
-    keywords: 'логопед онлайн, логопед для дітей, логопедичні заняття онлайн, корекція мовлення, розвиток мовлення у дітей',
-    author: 'Аліна Дорохова',
-    creator: 'Олександр Дорохов',
+    alternates: {
+    canonical: `https://alinadorokhova.com/blog/${slug}`,
+    },
     openGraph: {
       title: blog.title,
       description: 'Сучасна логопедія для дітей та дорослих. Онлайн консультації з логопедом.',
@@ -27,14 +27,8 @@ export async function generateMetadata({ params }: { params: Promise<{slug: stri
         alt: 'Аліна Дорохова - логопед онлайн',
         },
       ],
-  },
-  alternates: {
-    canonical: `https://alinadorokhova.com/blog/${slug}`,
-  },
-  metadataBase: new URL('https://alinadorokhova.com'),
+    },
   }
-    
-    
 }
 
 export default async function Article({ params }: { params: Promise<{slug: string }>} ) {

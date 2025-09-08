@@ -4,31 +4,21 @@ import Communication from "@/components/Communication"
 import MyTools from "@/components/MyTools"
 import Schedule from "@/components/Schedule"
 import Head from "next/head"
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: 'Логопед онлайн — Аліна Дорохова | Корекція і розвиток мовлення',
-  description: 'Логопед онлайн Аліна Дорохова — консультації для дітей та дорослих. Допомога при затримці мовлення, дислексії, заїканні та інших мовленнєвих порушеннях. Досвід та індивідуальний підхід з турботою про кожного клієнта!',
-  keywords: 'логопед онлайн, логопед для дітей, логопедичні заняття онлайн, корекція мовлення, розвиток мовлення у дітей',
-  author: 'Аліна Дорохова',
-  creator: 'Олександр Дорохов',
-  openGraph: {
-    title: 'Аліна Дорохова - логопед онлайн',
-    description: 'Сучасна логопедія для дітей та дорослих. Онлайн консультації з логопедом.',
-    images: [
-      {
-        url: '/favicon.ico',
-        width: 1200,
-        height: 630,
-        alt: 'Аліна Дорохова - логопед онлайн',
-      },
-    ],
-    siteName: 'Аліна Дорохова - логопед онлайн',
-  },
+export const metadata: Metadata = {
+  title: 'Про логопеда Аліну Дорохову',
+  description: 'Дізнайтеся більше про досвід та кваліфікацію логопеда Аліни Дорохової. Індивідуальний підхід до кожного клієнта. Корекція мовлення для дітей та дорослих.',
   alternates: {
-    canonical: 'https://alinadorokhova.com/info/',
+    canonical: 'https://alinadorokhova.com/info',
   },
-  metadataBase: new URL('https://alinadorokhova.com/'),
+  openGraph: {
+    title: 'Про логопеда Аліну Дорохову',
+    description: 'Детальна інформація про професійний шлях та методи роботи логопеда Аліни Дорохової.',
+    url: 'https://alinadorokhova.com/info',
+  },
 }
+
 
 export default function Info() {
     return (
